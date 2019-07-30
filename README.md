@@ -1,4 +1,6 @@
-# ![SchemaCrawler](https://github.com/schemacrawler/SchemaCrawler/raw/master/schemacrawler-docs/logo/schemacrawler_logo.png?raw=true) SchemaCrawler - Plugins Starter
+![SchemaCrawler](https://github.com/sualeh/SchemaCrawler/raw/master/schemacrawler-distrib/src/site/resources/images/schemacrawler_logo.png?raw=true) 
+
+#SchemaCrawler - Plugins Starter
 
 > **Please see the [SchemaCrawler website](http://www.schemacrawler.com/) for more details.**
 

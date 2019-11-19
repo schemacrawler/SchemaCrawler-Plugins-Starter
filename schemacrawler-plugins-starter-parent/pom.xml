@@ -31,8 +31,8 @@
   </distributionManagement>
   <modules>
     <module>../example-command-plugin</module>
-		<module>../example-dbconnector-plugin</module>
-		<module>../example-lint-plugin</module>
+    <module>../example-dbconnector-plugin</module>
+    <module>../example-lint-plugin</module>
   </modules>
   <profiles>
     <profile>

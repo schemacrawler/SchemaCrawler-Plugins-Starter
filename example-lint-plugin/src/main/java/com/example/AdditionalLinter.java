@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 
 import schemacrawler.schema.Table;
 import schemacrawler.tools.lint.BaseLinter;
+import schemacrawler.tools.lint.LintObjectType;
 
 public class AdditionalLinter
   extends BaseLinter
@@ -32,8 +33,8 @@ public class AdditionalLinter
         LOGGER
           .log(Level.INFO,
                String.format("Adding lint for table <%s>", table));
-        
-        addLint(table, getSummary(), table.getFullName());
+
+        addLint(LintObjectType.table, table, getSummary(), table.getFullName());
       }
     }
   }

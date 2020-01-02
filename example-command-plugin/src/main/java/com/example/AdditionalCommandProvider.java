@@ -1,6 +1,7 @@
 package com.example;
 
 
+import schemacrawler.schemacrawler.Config;
 import schemacrawler.schemacrawler.SchemaCrawlerOptions;
 import schemacrawler.tools.executable.BaseCommandProvider;
 import schemacrawler.tools.executable.CommandDescription;
@@ -38,6 +39,7 @@ public class AdditionalCommandProvider
   @Override
   public boolean supportsSchemaCrawlerCommand(final String command,
                                               final SchemaCrawlerOptions schemaCrawlerOptions,
+                                              final Config additionalConfiguration,
                                               final OutputOptions outputOptions)
   {
     return supportsCommand(command);

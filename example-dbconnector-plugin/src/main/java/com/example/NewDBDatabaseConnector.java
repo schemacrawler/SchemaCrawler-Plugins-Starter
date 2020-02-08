@@ -3,7 +3,6 @@ package com.example;
 
 import java.io.IOException;
 import java.util.function.Predicate;
-import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
 import schemacrawler.schemacrawler.DatabaseServerType;

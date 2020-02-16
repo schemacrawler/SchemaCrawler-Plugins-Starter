@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>us.fatehi</groupId>
+    <artifactId>schemacrawler-parent</artifactId>
+    <version>16.4.1</version>
+  </parent>
+  <artifactId>schemacrawler-plugins-starter-parent</artifactId>
+  <packaging>pom</packaging>
+  <name>SchemaCrawler Plugins Starter</name>
+  <description>Starter project for writing SchemaCrawler plugins</description>
+  <url>https://github.com/schemacrawler/SchemaCrawler-Plugins-Starter</url>
+  <scm>
+    <url>https://github.com/schemacrawler/SchemaCrawler-Plugins-Starter</url>
+    <connection>scm:git:git://github.com/schemacrawler/SchemaCrawler-Plugins-Starter.git</connection>
+  </scm>
+  <modules>
+    <module>example-command-plugin</module>
+    <module>example-dbconnector-plugin</module>
+    <module>example-lint-plugin</module>
+  </modules>
+</project>

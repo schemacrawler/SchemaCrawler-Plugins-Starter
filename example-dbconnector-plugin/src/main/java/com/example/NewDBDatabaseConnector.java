@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 import schemacrawler.schemacrawler.DatabaseServerType;
 import schemacrawler.tools.databaseconnector.DatabaseConnector;
-import schemacrawler.tools.iosource.ClasspathInputResource;
+import us.fatehi.utility.ioresource.ClasspathInputResource;
 
 /**
  * SchemaCrawler database support plug-in.

@@ -9,7 +9,7 @@ import schemacrawler.schema.Column;
 import schemacrawler.schema.Schema;
 import schemacrawler.schema.Table;
 import schemacrawler.tools.executable.BaseSchemaCrawlerCommand;
-import sf.util.StringFormat;
+import us.fatehi.utility.string.StringFormat;
 
 /**
  * SchemaCrawler command plug-in.

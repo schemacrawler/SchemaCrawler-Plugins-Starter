@@ -2,12 +2,9 @@ package com.example;
 
 
 import java.io.IOException;
-import java.util.function.Predicate;
-import java.util.regex.Pattern;
-
 import schemacrawler.schemacrawler.DatabaseServerType;
+import schemacrawler.tools.databaseconnector.DatabaseConnectionUrlBuilder;
 import schemacrawler.tools.databaseconnector.DatabaseConnector;
-import us.fatehi.utility.ioresource.ClasspathInputResource;
 
 /**
  * SchemaCrawler database support plug-in.
@@ -20,23 +17,16 @@ public final class NewDBDatabaseConnector
   extends DatabaseConnector
 {
 
-  private static final DatabaseServerType DB_SERVER_TYPE = new DatabaseServerType(
-    "newdb",
-    "NewDB");
-
-  public NewDBDatabaseConnector()
-    throws IOException
+  public NewDBDatabaseConnector() throws IOException
   {
-    super(DB_SERVER_TYPE,
-          new ClasspathInputResource("/schemacrawler-newdb.config.properties"),
-          (informationSchemaViewsBuilder, connection) -> informationSchemaViewsBuilder
-            .fromResourceFolder("/newdb.information_schema"));
-  }
-
-  @Override
-  protected Predicate<String> supportsUrlPredicate()
-  {
-    return url -> Pattern.matches("jdbc:newdb:.*", url);
+    super(new DatabaseServerType("newdb", "NewDB"),
+        url -> url != null && url.startsWith("jdbc:newdb:"),
+        (informationSchemaViewsBuilder,
+            connection) -> informationSchemaViewsBuilder
+                .fromResourceFolder("/newdb.information_schema"),
+        (schemaRetrievalOptionsBuilder, connection) -> {}, 
+        (limitOptionsBuilder) -> {},
+        () -> DatabaseConnectionUrlBuilder.builder("jdbc:newdb:${database}"));
   }
 
 }

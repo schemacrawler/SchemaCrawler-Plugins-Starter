@@ -2,8 +2,8 @@ package com.example;
 
 import schemacrawler.tools.executable.BaseCommandProvider;
 import schemacrawler.tools.executable.CommandDescription;
-import schemacrawler.tools.executable.SchemaCrawlerCommand;
 import schemacrawler.tools.executable.commandline.PluginCommand;
+import schemacrawler.tools.options.Config;
 import schemacrawler.tools.options.OutputOptions;
 
 /**
@@ -28,11 +28,13 @@ public class AdditionalCommandProvider extends BaseCommandProvider {
   }
 
   @Override
-  public SchemaCrawlerCommand newSchemaCrawlerCommand(final String command) {
+  public AdditionalCommand newSchemaCrawlerCommand(final String command, final Config config) {
     if (!AdditionalCommand.COMMAND.equals(command)) {
       throw new IllegalArgumentException("Cannot support command, " + command);
     }
-    return new AdditionalCommand();
+    final AdditionalCommand scCommand = new AdditionalCommand();
+    scCommand.setCommandOptions(new AdditionalCommandOptions());
+    return scCommand;
   }
 
   @Override

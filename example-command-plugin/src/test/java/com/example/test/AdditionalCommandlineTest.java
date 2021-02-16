@@ -43,7 +43,7 @@ import schemacrawler.test.utility.DatabaseConnectionInfo;
 import schemacrawler.test.utility.TestAssertNoSystemErrOutput;
 import schemacrawler.test.utility.TestAssertNoSystemOutOutput;
 import schemacrawler.test.utility.TestDatabaseConnectionParameterResolver;
-import schemacrawler.tools.options.TextOutputFormat;
+import schemacrawler.tools.command.text.schema.options.TextOutputFormat;
 
 @ExtendWith(TestAssertNoSystemErrOutput.class)
 @ExtendWith(TestAssertNoSystemOutOutput.class)
@@ -53,7 +53,7 @@ public class AdditionalCommandlineTest {
   @Test
   public void commandlineAdditional(final DatabaseConnectionInfo connectionInfo) throws Exception {
     final Map<String, String> argsMap = new HashMap<>();
-    argsMap.put("-info-level", InfoLevel.standard.name());
+    argsMap.put("--info-level", InfoLevel.standard.name());
 
     assertThat(
         outputOf(

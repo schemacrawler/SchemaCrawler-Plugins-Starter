@@ -6,7 +6,7 @@
 
 ## About
 
-SchemaCrawler is a free database schema discovery and comprehension tool. SchemaCrawler is available under a number of [licenses](http://sualeh.github.io/SchemaCrawler/license.html).
+SchemaCrawler is a free database schema discovery and comprehension tool. SchemaCrawler is available under a number of [licenses](https://sualeh.github.io/SchemaCrawler/license.html).
 
 This project provides SchemaCrawler starter projects to develop SchemaCrawler plugins. SchemaCrawler provides an API to develop plugins for custom schema lints, support for additional RDBMS systems, and new commands. Once these new plugins are on the classpath, they will seamlessly snap into the SchemaCrawler command-line and API.
 
@@ -22,4 +22,4 @@ SchemaCrawler is available under a number of [licenses](https://www.schemacrawle
 
 ## Support
 
-These plugin starter projects are not supported, unless you purchase a support incident. Please see [Guidelines for Support](http://sualeh.github.io/SchemaCrawler/consulting.html) for details.
+These plugin starter projects are not supported, unless you purchase a support incident. Please see [Guidelines for Support](https://sualeh.github.io/SchemaCrawler/consulting.html) for details.

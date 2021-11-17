@@ -27,10 +27,15 @@ public class AdditionalCommand extends BaseSchemaCrawlerCommand<AdditionalComman
   }
 
   @Override
-  public void execute() throws Exception {
+  public void checkAvailability() throws RuntimeException {
+    // TODO: Check environment (classpath, external resources) to see if command can be executed
+  }
+
+  @Override
+  public void execute() {
     // TODO: Possibly process options
 
-    try (final PrintWriter writer = new PrintWriter(outputOptions.openNewOutputWriter()); ) {
+    try (final PrintWriter writer = outputOptions.openNewOutputWriter(); ) {
       for (final Schema schema : catalog.getSchemas()) {
         // SchemaCrawler will control output of log messages if you use
         // JDK logging

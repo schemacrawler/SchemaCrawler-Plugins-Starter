@@ -2,8 +2,8 @@ package com.example;
 
 import java.io.IOException;
 import schemacrawler.schemacrawler.DatabaseServerType;
-import schemacrawler.tools.databaseconnector.DatabaseConnectionUrlBuilder;
 import schemacrawler.tools.databaseconnector.DatabaseConnector;
+import us.fatehi.utility.datasource.DatabaseConnectionSourceBuilder;
 
 /**
  * SchemaCrawler database support plug-in.
@@ -22,6 +22,6 @@ public final class NewDBDatabaseConnector extends DatabaseConnector {
             informationSchemaViewsBuilder.fromResourceFolder("/newdb.information_schema"),
         (schemaRetrievalOptionsBuilder, connection) -> {},
         (limitOptionsBuilder) -> {},
-        () -> DatabaseConnectionUrlBuilder.builder("jdbc:newdb:${database}"));
+        () -> DatabaseConnectionSourceBuilder.builder("jdbc:newdb:${database}"));
   }
 }

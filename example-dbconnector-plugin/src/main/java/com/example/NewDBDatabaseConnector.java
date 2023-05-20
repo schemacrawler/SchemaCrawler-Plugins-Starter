@@ -1,6 +1,5 @@
 package com.example;
 
-import java.io.IOException;
 import schemacrawler.schemacrawler.DatabaseServerType;
 import schemacrawler.tools.databaseconnector.DatabaseConnector;
 import us.fatehi.utility.datasource.DatabaseConnectionSourceBuilder;

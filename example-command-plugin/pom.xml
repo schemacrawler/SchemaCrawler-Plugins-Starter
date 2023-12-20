@@ -122,7 +122,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <schemacrawler.version>16.20.6</schemacrawler.version>
+    <schemacrawler.version>16.20.7</schemacrawler.version>
   </properties>
 
 </project>

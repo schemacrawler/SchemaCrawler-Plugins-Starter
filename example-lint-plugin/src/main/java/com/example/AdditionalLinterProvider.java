@@ -3,12 +3,32 @@ package com.example;
 import java.sql.Connection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import schemacrawler.schema.Table;
 import schemacrawler.tools.lint.BaseLinter;
+import schemacrawler.tools.lint.BaseLinterProvider;
+import schemacrawler.tools.lint.LintCollector;
 import schemacrawler.tools.lint.LintObjectType;
+import us.fatehi.utility.property.PropertyName;
 
-public class AdditionalLinter extends BaseLinter {
+public class AdditionalLinterProvider extends BaseLinterProvider {
+
+  private static final long serialVersionUID = 1L;
+
+  public AdditionalLinterProvider() {
+    super(AdditionalLinter.class.getName());
+  }
+
+  @Override
+  public BaseLinter newLinter(final LintCollector lintCollector) {
+    return new AdditionalLinter(getPropertyName(), lintCollector);
+  }
+}
+
+class AdditionalLinter extends BaseLinter {
+
+  AdditionalLinter(final PropertyName linterName, final LintCollector lintCollector) {
+    super(linterName, lintCollector);
+  }
 
   private static final Logger LOGGER = Logger.getLogger(AdditionalLinter.class.getName());
 

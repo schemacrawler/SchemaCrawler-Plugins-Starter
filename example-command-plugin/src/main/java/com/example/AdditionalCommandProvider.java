@@ -1,10 +1,10 @@
 package com.example;
 
 import schemacrawler.tools.executable.BaseCommandProvider;
-import schemacrawler.tools.executable.CommandDescription;
 import schemacrawler.tools.executable.commandline.PluginCommand;
 import schemacrawler.tools.options.Config;
 import schemacrawler.tools.options.OutputOptions;
+import us.fatehi.utility.property.PropertyName;
 
 /**
  * SchemaCrawler command plug-in.
@@ -19,7 +19,7 @@ public class AdditionalCommandProvider extends BaseCommandProvider {
   public static final String HELP_HEADER = "Additional SchemaCrawler functionality";
 
   public AdditionalCommandProvider() {
-    super(new CommandDescription(AdditionalCommand.COMMAND, HELP_HEADER));
+    super(new PropertyName(AdditionalCommand.COMMAND, HELP_HEADER));
   }
 
   @Override

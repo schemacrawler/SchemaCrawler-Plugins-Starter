@@ -3,11 +3,11 @@ package com.example;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import schemacrawler.schema.Column;
 import schemacrawler.schema.Schema;
 import schemacrawler.schema.Table;
 import schemacrawler.tools.executable.BaseSchemaCrawlerCommand;
+import us.fatehi.utility.property.PropertyName;
 import us.fatehi.utility.string.StringFormat;
 
 /** SchemaCrawler command plug-in. */
@@ -15,7 +15,7 @@ public class AdditionalCommand extends BaseSchemaCrawlerCommand<AdditionalComman
 
   private static final Logger LOGGER = Logger.getLogger(AdditionalCommand.class.getName());
 
-  static final String COMMAND = "additional";
+  static final PropertyName COMMAND = new PropertyName("additional", "Additional SchemaCrawler functionality");
 
   protected AdditionalCommand() {
     super(COMMAND);

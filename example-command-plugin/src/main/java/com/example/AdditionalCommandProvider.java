@@ -4,7 +4,6 @@ import schemacrawler.tools.executable.BaseCommandProvider;
 import schemacrawler.tools.executable.commandline.PluginCommand;
 import schemacrawler.tools.options.Config;
 import schemacrawler.tools.options.OutputOptions;
-import us.fatehi.utility.property.PropertyName;
 
 /**
  * SchemaCrawler command plug-in.
@@ -16,10 +15,8 @@ import us.fatehi.utility.property.PropertyName;
  */
 public class AdditionalCommandProvider extends BaseCommandProvider {
 
-  public static final String HELP_HEADER = "Additional SchemaCrawler functionality";
-
   public AdditionalCommandProvider() {
-    super(new PropertyName(AdditionalCommand.COMMAND, HELP_HEADER));
+    super(AdditionalCommand.COMMAND);
   }
 
   @Override
@@ -29,11 +26,11 @@ public class AdditionalCommandProvider extends BaseCommandProvider {
 
   @Override
   public AdditionalCommand newSchemaCrawlerCommand(final String command, final Config config) {
-    if (!AdditionalCommand.COMMAND.equals(command)) {
+    if (!supportsCommand(command)) {
       throw new IllegalArgumentException("Cannot support command, " + command);
     }
     final AdditionalCommand scCommand = new AdditionalCommand();
-    scCommand.setCommandOptions(new AdditionalCommandOptions());
+    scCommand.configure(new AdditionalCommandOptions());
     return scCommand;
   }
 

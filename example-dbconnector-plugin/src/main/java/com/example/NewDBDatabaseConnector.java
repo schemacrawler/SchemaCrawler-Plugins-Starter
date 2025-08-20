@@ -1,8 +1,8 @@
 package com.example;
 
-import schemacrawler.schemacrawler.DatabaseServerType;
 import schemacrawler.tools.databaseconnector.DatabaseConnector;
 import us.fatehi.utility.datasource.DatabaseConnectionSourceBuilder;
+import us.fatehi.utility.datasource.DatabaseServerType;
 
 /**
  * SchemaCrawler database support plug-in.

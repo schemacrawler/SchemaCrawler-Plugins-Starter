@@ -13,13 +13,13 @@
   <name>SchemaCrawler Plugins Starter</name>
   <description>Starter project for writing SchemaCrawler plugins</description>
   <url>https://github.com/schemacrawler/SchemaCrawler-Plugins-Starter</url>
-  <scm>
-    <url>https://github.com/schemacrawler/SchemaCrawler-Plugins-Starter</url>
-    <connection>scm:git:git://github.com/schemacrawler/SchemaCrawler-Plugins-Starter.git</connection>
-  </scm>
   <modules>
     <module>example-command-plugin</module>
     <module>example-dbconnector-plugin</module>
     <module>example-lint-plugin</module>
   </modules>
+  <scm>
+    <url>https://github.com/schemacrawler/SchemaCrawler-Plugins-Starter</url>
+    <connection>scm:git:git://github.com/schemacrawler/SchemaCrawler-Plugins-Starter.git</connection>
+  </scm>
 </project>

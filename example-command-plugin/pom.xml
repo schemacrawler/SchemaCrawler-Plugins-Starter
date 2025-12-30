@@ -14,7 +14,7 @@
       <dependency>
         <groupId>us.fatehi</groupId>
         <artifactId>schemacrawler-library-bom</artifactId>
-        <version>17.1.7</version>
+        <version>17.2.8</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -59,14 +59,7 @@
     </dependency>
     <dependency>
       <groupId>us.fatehi</groupId>
-      <artifactId>schemacrawler-api</artifactId>
-      <type>test-jar</type>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>us.fatehi</groupId>
-      <artifactId>schemacrawler-tools</artifactId>
-      <type>test-jar</type>
+      <artifactId>schemacrawler-tests</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>

@@ -1,6 +1,8 @@
 package com.example;
 
 import schemacrawler.tools.databaseconnector.DatabaseConnector;
+import schemacrawler.tools.databaseconnector.DatabaseConnectorOptions;
+import schemacrawler.tools.databaseconnector.DatabaseConnectorOptionsBuilder;
 import us.fatehi.utility.datasource.DatabaseConnectionSourceBuilder;
 import us.fatehi.utility.datasource.DatabaseServerType;
 
@@ -13,14 +15,20 @@ import us.fatehi.utility.datasource.DatabaseServerType;
  */
 public final class NewDBDatabaseConnector extends DatabaseConnector {
 
+  private static DatabaseConnectorOptions databaseConnectorOptions() {
+    final DatabaseServerType dbServerType = new DatabaseServerType("newdb", "NewDB");
+
+    final DatabaseConnectionSourceBuilder connectionSourceBuilder =
+        DatabaseConnectionSourceBuilder.builder("jdbc:newdb:${database}");
+
+    return DatabaseConnectorOptionsBuilder.builder(dbServerType)
+        .withUrlSupportPredicate(url -> url != null && url.startsWith("jdbc:newdb:"))
+        .withInformationSchemaViewsFromResourceFolder("/newdb.information_schema")
+        .withDatabaseConnectionSourceBuilder(() -> connectionSourceBuilder)
+        .build();
+  }
+
   public NewDBDatabaseConnector() {
-    super(
-        new DatabaseServerType("newdb", "NewDB"),
-        url -> url != null && url.startsWith("jdbc:newdb:"),
-        (informationSchemaViewsBuilder, connection) ->
-            informationSchemaViewsBuilder.fromResourceFolder("/newdb.information_schema"),
-        (schemaRetrievalOptionsBuilder, connection) -> {},
-        (limitOptionsBuilder) -> {},
-        () -> DatabaseConnectionSourceBuilder.builder("jdbc:newdb:${database}"));
+    super(databaseConnectorOptions());
   }
 }

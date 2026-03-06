@@ -25,7 +25,7 @@ public class AdditionalCommandProvider extends BaseCommandProvider {
   }
 
   @Override
-  public AdditionalCommand newSchemaCrawlerCommand(final String command, final Config config) {
+  public AdditionalCommand newCommand(final String command, final Config config) {
     if (!supportsCommand(command)) {
       throw new IllegalArgumentException("Cannot support command, " + command);
     }

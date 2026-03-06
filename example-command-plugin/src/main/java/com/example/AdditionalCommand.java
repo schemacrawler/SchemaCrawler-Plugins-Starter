@@ -6,24 +6,20 @@ import java.util.logging.Logger;
 import schemacrawler.schema.Column;
 import schemacrawler.schema.Schema;
 import schemacrawler.schema.Table;
-import schemacrawler.tools.executable.BaseSchemaCrawlerCommand;
+import schemacrawler.tools.executable.AbstractSchemaCrawlerCommand;
 import us.fatehi.utility.property.PropertyName;
 import us.fatehi.utility.string.StringFormat;
 
 /** SchemaCrawler command plug-in. */
-public class AdditionalCommand extends BaseSchemaCrawlerCommand<AdditionalCommandOptions> {
+public class AdditionalCommand extends AbstractSchemaCrawlerCommand<AdditionalCommandOptions> {
 
   private static final Logger LOGGER = Logger.getLogger(AdditionalCommand.class.getName());
 
-  static final PropertyName COMMAND = new PropertyName("additional", "Additional SchemaCrawler functionality");
+  static final PropertyName COMMAND =
+      new PropertyName("additional", "Additional SchemaCrawler functionality");
 
   protected AdditionalCommand() {
     super(COMMAND);
-  }
-
-  @Override
-  public void checkAvailability() throws RuntimeException {
-    // TODO: Check environment (classpath, external resources) to see if command can be executed
   }
 
   @Override

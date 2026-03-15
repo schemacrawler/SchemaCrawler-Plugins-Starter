@@ -3,10 +3,11 @@ package com.example;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import schemacrawler.schema.Catalog;
 import schemacrawler.schema.Column;
 import schemacrawler.schema.Schema;
 import schemacrawler.schema.Table;
-import schemacrawler.tools.executable.AbstractSchemaCrawlerCommand;
+import schemacrawler.tools.command.AbstractSchemaCrawlerCommand;
 import us.fatehi.utility.property.PropertyName;
 import us.fatehi.utility.string.StringFormat;
 
@@ -25,6 +26,8 @@ public class AdditionalCommand extends AbstractSchemaCrawlerCommand<AdditionalCo
   @Override
   public void execute() {
     // TODO: Possibly process options
+
+    final Catalog catalog = getCatalog();
 
     try (final PrintWriter writer = outputOptions.openNewOutputWriter(); ) {
       for (final Schema schema : catalog.getSchemas()) {

@@ -1,6 +1,6 @@
 package com.example;
 
-import schemacrawler.tools.executable.BaseCommandProvider;
+import schemacrawler.tools.command.AbstractSchemaCrawlerCommandProvider;
 import schemacrawler.tools.executable.commandline.PluginCommand;
 import schemacrawler.tools.options.Config;
 import schemacrawler.tools.options.OutputOptions;
@@ -13,7 +13,7 @@ import schemacrawler.tools.options.OutputOptions;
  *
  * @see <a href="https://www.schemacrawler.com">SchemaCrawler</a>
  */
-public class AdditionalCommandProvider extends BaseCommandProvider {
+public class AdditionalCommandProvider extends AbstractSchemaCrawlerCommandProvider {
 
   public AdditionalCommandProvider() {
     super(AdditionalCommand.COMMAND);

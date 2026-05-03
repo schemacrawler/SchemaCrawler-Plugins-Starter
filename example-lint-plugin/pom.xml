@@ -16,7 +16,7 @@
       <dependency>
         <groupId>us.fatehi</groupId>
         <artifactId>schemacrawler-library-bom</artifactId>
-        <version>17.10.2</version>
+        <version>17.11.0</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

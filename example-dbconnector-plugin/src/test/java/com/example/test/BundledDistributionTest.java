@@ -11,7 +11,7 @@ public class BundledDistributionTest {
   @Test
   public void testPlugin_newdb() throws Exception {
     final DatabaseConnectorRegistry registry =
-        DatabaseConnectorRegistry.getDatabaseConnectorRegistry();
+        DatabaseConnectorRegistry.getRegistry();
     assertThat(registry.hasDatabaseSystemIdentifier("newdb"), is(true));
   }
 }

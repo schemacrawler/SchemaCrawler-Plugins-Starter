@@ -22,7 +22,6 @@ public final class NewDBDatabaseConnector extends DatabaseConnector {
         DatabaseConnectionSourceBuilder.builder("jdbc:newdb:${database}");
 
     return DatabaseConnectorOptionsBuilder.builder(dbServerType)
-        .withUrlSupportPredicate(url -> url != null && url.startsWith("jdbc:newdb:"))
         .withInformationSchemaViewsFromResourceFolder("/newdb.information_schema")
         .withDatabaseConnectionSourceBuilder(() -> connectionSourceBuilder)
         .build();

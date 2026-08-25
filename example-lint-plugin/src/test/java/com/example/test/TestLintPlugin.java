@@ -9,7 +9,7 @@ public class TestLintPlugin {
 
   @Test
   public void testLintPlugin() throws Exception {
-    final LinterRegistry registry = LinterRegistry.getLinterRegistry();
+    final LinterRegistry registry = LinterRegistry.getRegistry();
     assertThat(registry.hasLinter("com.example.AdditionalLinter"), is(true));
   }
 }
